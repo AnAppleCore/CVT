@@ -20,14 +20,13 @@ from models import get_model
 from utils.training import train
 from utils.best_args import best_args
 from utils.conf import set_random_seed
-import megengine as mge
+# import megengine as mge
 # from torchsummary import summary
-from torchsummaryX import summary
 import torch
-from thop import profile
-from torchstat import stat
+# from thop import profile
+# from torchstat import stat
 import torchvision
-from ptflops import get_model_complexity_info
+# from ptflops import get_model_complexity_info
 from apex.parallel import DistributedDataParallel as DDP_apex
 from apex.parallel import convert_syncbn_model
 import torch.distributed as dist

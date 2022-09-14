@@ -24,4 +24,10 @@ rsa==4.0
 six==1.14.0
 tensorboard==2.0.1
 urllib3==1.25.8
-Werkzeug==1.0.0
+werkzeug==1.0.0
+einops==0.4.1
+imgaug==0.4.0
+albumentations==1.2.1
+kornia==0.5.8
+pytorch_metric_learning==1.6.0
+apex==0.1

@@ -804,7 +804,10 @@ class CVT_online(nn.Module):
         elif self.cnnbackbone == 'ResNet18Pre224':
             self.conv = ResNet18Pre224(self.stages)
         elif self.cnnbackbone == 'PreActResNet':
-            self.conv = PreActResNet()
+            #FIXME
+            # self.conv = PreActResNet()
+            self.conv = None()
+            pass
         else:
             assert()
 

@@ -3,7 +3,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.functional import relu, avg_pool2d
 from typing import List
-from .cbam import CBAM
+#FIXME
+# from .cbam import CBAM
+CBAM = nn.Identity()
 
 
 def conv3x3(in_planes: int, out_planes: int, stride: int=1) -> F.conv2d:

@@ -10,15 +10,15 @@ from typing import Tuple
 from datasets import get_dataset
 import sys
 import copy
-from torchsummaryX import summary
-from ptflops import get_model_complexity_info
+# from torchsummaryX import summary
+# from ptflops import get_model_complexity_info
 from torch import nn
 import time
 from apex import amp
 from apex.parallel import DistributedDataParallel
 from apex.parallel import convert_syncbn_model
 import torch.distributed as dist
-import megengine as mge
+# import megengine as mge
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import datasets

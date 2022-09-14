@@ -10,11 +10,11 @@ import numpy as np
 import pdb
 from datasets import get_dataset
 from pytorch_metric_learning import losses as torch_losses
-from apex import amp
-from apex.parallel import DistributedDataParallel
-from apex.parallel import convert_syncbn_model
+# from apex import amp
+# from apex.parallel import DistributedDataParallel
+# from apex.parallel import convert_syncbn_model
 from losses.SupConLoss import SupConLoss
-from kornia.augmentation import RandomResizedCrop, RandomHorizontalFlip, ColorJitter, RandomGrayscale
+# from kornia.augmentation import RandomResizedCrop, RandomHorizontalFlip, ColorJitter, RandomGrayscale
 
 def get_parameter_number(net):
     trainable_num = sum(p.numel() for p in net.parameters() if p.requires_grad)
