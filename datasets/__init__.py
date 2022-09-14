@@ -3,7 +3,6 @@ from argparse import Namespace
 from datasets.seq_cifar100 import SequentialCIFAR100
 
 
-
 NAMES = {
     SequentialCIFAR100.NAME: SequentialCIFAR100,
 }

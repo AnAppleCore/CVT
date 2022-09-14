@@ -1,29 +1,30 @@
-import torch
-from utils.status import progress_bar, create_stash
-from utils.tb_logger import *
-from utils.loggers import *
-from utils.loggers import CsvLogger
-from argparse import Namespace
-from models.utils.continual_model import ContinualModel
-from datasets.utils.continual_dataset import ContinualDataset
-from typing import Tuple
-from datasets import get_dataset
-import sys
 import copy
+import sys
+import time
+from argparse import Namespace
+from typing import Tuple
+
+import matplotlib.pyplot as plt
+# import megengine as mge
+import numpy as np
+import seaborn as sns
+import torch
+import torch.distributed as dist
+from apex import amp
+from apex.parallel import DistributedDataParallel, convert_syncbn_model
+from datasets import get_dataset
+from datasets.utils.continual_dataset import ContinualDataset
+from models.utils.continual_model import ContinualModel
+from sklearn import datasets
+from sklearn.manifold import TSNE
 # from torchsummaryX import summary
 # from ptflops import get_model_complexity_info
 from torch import nn
-import time
-from apex import amp
-from apex.parallel import DistributedDataParallel
-from apex.parallel import convert_syncbn_model
-import torch.distributed as dist
-# import megengine as mge
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn import datasets
-from sklearn.manifold import TSNE
-import seaborn as sns
+
+from utils.loggers import *
+from utils.loggers import CsvLogger
+from utils.status import create_stash, progress_bar
+from utils.tb_logger import *
 
 torch.manual_seed(0)
 np.random.seed(0)

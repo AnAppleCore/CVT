@@ -1,10 +1,12 @@
-import torch
-from PIL import Image
-import numpy as np
 import os
-from utils import create_if_not_exists
+
+import numpy as np
+import torch
 import torchvision.transforms.transforms as transforms
+from PIL import Image
 from torchvision import datasets
+
+from utils import create_if_not_exists
 
 
 class ValidationDataset(torch.utils.data.Dataset):

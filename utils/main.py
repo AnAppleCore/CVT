@@ -122,7 +122,7 @@ def main():
         else:
             model = torch.nn.SyncBatchNorm.convert_sync_batchnorm(model)
 
-        print("Let's use", torch.cuda.device_count(), "GPUs!!!")
+        print(f"Let's use {torch.cuda.device_count()} GPUs!!!")
         if hasattr(model.net, 'net') and hasattr(model.net.net, 'distill_classifier'):
             distill_classifier = model.net.net.distill_classifier
             distill_classification = model.net.net.distill_classification

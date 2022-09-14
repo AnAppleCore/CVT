@@ -1,15 +1,18 @@
+import warnings
 from abc import abstractmethod
 from argparse import Namespace
-from torch import nn as nn
-from torchvision.transforms import transforms
 from typing import Tuple
-from torchvision import datasets
+
 import numpy as np
-from torch.utils.data import Dataset, DataLoader
-import warnings
 import torch
 import torchvision.transforms.functional as transofrms_f
-from datasets.utils.multi_dataloader import CudaDataLoader, MultiEpochsDataLoader
+from datasets.utils.multi_dataloader import (CudaDataLoader,
+                                             MultiEpochsDataLoader)
+from torch import nn as nn
+from torch.utils.data import DataLoader, Dataset
+from torchvision import datasets
+from torchvision.transforms import transforms
+
 from utils.conf import get_device
 
 

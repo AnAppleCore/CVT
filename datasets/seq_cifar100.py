@@ -1,24 +1,28 @@
+from typing import Tuple
+
+import albumentations as A
+import numpy as np
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torchvision.models as models
+import torchvision.transforms as transforms
+from albumentations.pytorch import ToTensorV2
+from backbone.CCT_our import CVT
+from backbone.ResNet18 import resnet18
+from kornia.augmentation import (ColorJitter, RandomGrayscale,
+                                 RandomHorizontalFlip, RandomResizedCrop)
+from PIL import Image
 from torch.utils.data import DataLoader
 from torchvision.datasets import CIFAR100
-import torchvision.transforms as transforms
-from backbone.ResNet18 import resnet18
-import torch.nn.functional as F
-from utils.conf import base_path
-from PIL import Image
-from datasets.utils.validation import get_train_val
-from backbone.CCT_our import CVT
-from datasets.utils.continual_dataset import ContinualDataset, store_masked_loaders
-from datasets.utils.continual_dataset import get_previous_train_loader
+
 from datasets.transforms.denormalization import DeNormalize
-import torch
-import albumentations as A
-from albumentations.pytorch import ToTensorV2
-import torchvision.models as models
-from typing import Tuple
-import numpy as np
-import torchvision.models as models
-from kornia.augmentation import RandomResizedCrop, RandomHorizontalFlip, ColorJitter, RandomGrayscale
-import torch.nn as nn
+from datasets.utils.continual_dataset import (ContinualDataset,
+                                              get_previous_train_loader,
+                                              store_masked_loaders)
+from datasets.utils.validation import get_train_val
+from utils.conf import base_path
+
 
 class MyCIFAR100(CIFAR100):
 
