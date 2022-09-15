@@ -4,11 +4,11 @@ import os
 sys.path.append(os.getcwd())
 import importlib
 
-_cpath_='/usr/local/python/3.7.7/lib/python3.7/site-packages'
-if _cpath_ in sys.path:
-    sys.path.remove(_cpath_)
+# _cpath_='/usr/local/python/3.7.7/lib/python3.7/site-packages'
+# if _cpath_ in sys.path:
+#     sys.path.remove(_cpath_)
 from datasets import NAMES as DATASET_NAMES
-sys.path.insert(50, _cpath_)
+# sys.path.insert(50, _cpath_)
 
 from models import get_all_models
 from argparse import ArgumentParser
@@ -33,11 +33,12 @@ import torch.distributed as dist
 from confusion_matrix import plot_confusion
 import random
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "{}".format(random.choice([1]))
+os.environ["CUDA_VISIBLE_DEVICES"] = "{}".format(random.choice([2]))
 
 from torch.nn.parallel import DistributedDataParallel as DDP
 import torch.nn as nn
 import warnings
+# warnings.warn("deprecated", DeprecationWarning)
 warnings.filterwarnings("ignore")
 warnings.simplefilter('ignore')
 
