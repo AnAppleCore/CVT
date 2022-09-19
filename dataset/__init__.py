@@ -1,6 +1,6 @@
-from datasets.utils.continual_dataset import ContinualDataset
+from dataset.utils.continual_dataset import ContinualDataset
 from argparse import Namespace
-from datasets.seq_cifar100 import SequentialCIFAR100
+from dataset.seq_cifar100 import SequentialCIFAR100
 
 
 NAMES = {

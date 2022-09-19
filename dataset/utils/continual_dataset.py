@@ -6,7 +6,7 @@ from typing import Tuple
 import numpy as np
 import torch
 import torchvision.transforms.functional as transofrms_f
-from datasets.utils.multi_dataloader import (CudaDataLoader,
+from dataset.utils.multi_dataloader import (CudaDataLoader,
                                              MultiEpochsDataLoader)
 from torch import nn as nn
 from torch.utils.data import DataLoader, Dataset

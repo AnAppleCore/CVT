@@ -1,5 +1,5 @@
 from argparse import ArgumentParser
-from datasets import NAMES as DATASET_NAMES
+from dataset import NAMES as DATASET_NAMES
 from models import get_all_models
 
 

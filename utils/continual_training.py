@@ -1,5 +1,5 @@
 import torch
-from datasets import get_gcl_dataset
+from dataset import get_gcl_dataset
 from models import get_model
 from utils.status import progress_bar
 from utils.tb_logger import *

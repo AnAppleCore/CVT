@@ -12,8 +12,8 @@ import torch
 import torch.distributed as dist
 from apex import amp
 from apex.parallel import DistributedDataParallel, convert_syncbn_model
-from datasets import get_dataset
-from datasets.utils.continual_dataset import ContinualDataset
+from dataset import get_dataset
+from dataset.utils.continual_dataset import ContinualDataset
 from models.utils.continual_model import ContinualModel
 from sklearn import datasets
 from sklearn.manifold import TSNE

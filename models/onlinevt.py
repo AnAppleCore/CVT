@@ -8,7 +8,7 @@ from utils.args import *
 from copy import deepcopy
 import numpy as np
 import pdb
-from datasets import get_dataset
+from dataset import get_dataset
 from pytorch_metric_learning import losses as torch_losses
 # from apex import amp
 # from apex.parallel import DistributedDataParallel

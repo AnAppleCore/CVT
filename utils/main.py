@@ -7,15 +7,15 @@ import importlib
 # _cpath_='/usr/local/python/3.7.7/lib/python3.7/site-packages'
 # if _cpath_ in sys.path:
 #     sys.path.remove(_cpath_)
-from datasets import NAMES as DATASET_NAMES
+from dataset import NAMES as DATASET_NAMES
 # sys.path.insert(50, _cpath_)
 
 from models import get_all_models
 from argparse import ArgumentParser
 from utils.args import add_management_args
-from datasets import ContinualDataset
+from dataset import ContinualDataset
 from utils.continual_training import train as ctrain
-from datasets import get_dataset
+from dataset import get_dataset
 from models import get_model
 from utils.training import train
 from utils.best_args import best_args
@@ -92,7 +92,7 @@ def main():
     setattr(args, 'GAN', 'GAN')
     setattr(args, 'use_albumentations', False)
     setattr(args, 'use_apex', False)
-    setattr(args, 'use_distributed', True)
+    setattr(args, 'use_distributed', False)
     if 'imagenet' in args.dataset:
         setattr(args, 'use_lr_scheduler', True)
     else:

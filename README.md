@@ -12,7 +12,7 @@ See [requirements.txt](./requirements.txt)
 
 - New models can be added to the models/ folder.
 
-- New datasets can be added to the datasets/ folder.
+- New datasets can be added to the dataset/ folder.
 
 ## 📋Results
 

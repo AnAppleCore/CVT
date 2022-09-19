@@ -16,11 +16,11 @@ from PIL import Image
 from torch.utils.data import DataLoader
 from torchvision.datasets import CIFAR100
 
-from datasets.transforms.denormalization import DeNormalize
-from datasets.utils.continual_dataset import (ContinualDataset,
+from dataset.transforms.denormalization import DeNormalize
+from dataset.utils.continual_dataset import (ContinualDataset,
                                               get_previous_train_loader,
                                               store_masked_loaders)
-from datasets.utils.validation import get_train_val
+from dataset.utils.validation import get_train_val
 from utils.conf import base_path
 
 

@@ -5,7 +5,7 @@ from utils.conf import base_path
 from typing import Any, Dict, Union
 from torch import nn
 from argparse import Namespace
-from datasets.utils.continual_dataset import ContinualDataset
+from dataset.utils.continual_dataset import ContinualDataset
 
 
 def create_stash(model: nn.Module, args: Namespace,
