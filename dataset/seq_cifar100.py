@@ -58,7 +58,7 @@ class SequentialCIFAR100(ContinualDataset):
     NAME = 'seq-cifar100'
     SETTING = 'class-il'
     N_CLASSES_TOTAL = 100
-    N_TASKS = 20  # 10
+    N_TASKS = 10
     N_CLASSES_PER_TASK = int(N_CLASSES_TOTAL/N_TASKS)
 
     def __init__(self, args) -> None:

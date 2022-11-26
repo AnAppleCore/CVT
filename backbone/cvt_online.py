@@ -842,6 +842,17 @@ class CVT_online(nn.Module):
         # self.focuses = F.normalize(focuses_org, dim=1)
         self.focus_labels = torch.tensor([i for i in range(self.num_classes)]).to(self.device)
 
+        for i, (name, model) in enumerate(self.named_children()):
+            print(f"{i}: {name} -- {self.num_param(model)/1e6:.2f}M")
+        print(f"**** NUM of Parameters: {self.num_param(self)/1e6:.2f}M ****")
+
+    @staticmethod
+    def num_param(model):
+        sum = 0
+        for p in model.parameters():
+            sum += p.numel()
+        return sum
+
     def focuses_head(self):
         return F.normalize(self.feature_head(self.focuses), dim=1)
 

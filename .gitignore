@@ -131,3 +131,5 @@ dmypy.json
 
 data/CIFAR10/*
 data/CIFAR100/*
+data/results/class-il/*
+data/results/task-il/*
